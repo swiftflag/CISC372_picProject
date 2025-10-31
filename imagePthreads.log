@@ -1,0 +1,27 @@
+Script started on Fri 31 Oct 2025 06:59:15 PM EDT
+]0;jaxsing@login01.darwin:~/CISC372_picProject[?1034h[jaxsing@login01.darwin CISC372_picProject]$ salloc --ntasks=1 --cpus-per-task=4 --partition=standard
+salloc: error: Please choose a workgroup before submitting a job
+salloc: error: cli_filter plugin terminated with error
+]0;jaxsing@login01.darwin:~/CISC372_picProject[jaxsing@login01.darwin CISC372_picProject]$ workgroup -g ea-cisc372-silber
+]0;jaxsing@login01.darwin:~/CISC372_picProject[?1034h[(ea-cisc372-silber:jaxsing)@login01.darwin CISC372_picProject]$ vpkg_require gcc
+Adding package `gcc/4.8.5` to your environment
+]0;jaxsing@login01.darwin:~/CISC372_picProject[(ea-cisc372-silber:jaxsing)@login01.darwin CISC372_picProject]$ salloc --ntasks=1 --cpus-per-task=4 --partition=standar d
+salloc: Pending job allocation 5759259
+salloc: job 5759259 queued and waiting for resources
+salloc: job 5759259 has been allocated resources
+salloc: Granted job allocation 5759259
+salloc: Waiting for resource configuration
+salloc: Nodes r1n06 are ready for job
+]0;jaxsing@r1n06.darwin:~/CISC372_picProject[?1034h[jaxsing@r1n06 CISC372_picProject]$ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+]0;jaxsing@r1n06.darwin:~/CISC372_picProject[jaxsing@r1n06 CISC372_picProject]$ srun imageP      .. /imagePthreads pic1.jpg edge
+All threads finished.
+Took 6 seconds
+]0;jaxsing@r1n06.darwin:~/CISC372_picProject[jaxsing@r1n06 CISC372_picProject]$ exit
+logout
+salloc: Relinquishing job allocation 5759259
+]0;jaxsing@login01.darwin:~/CISC372_picProject[(ea-cisc372-silber:jaxsing)@login01.darwin CISC372_picProject]$ exit
+logout
+]0;jaxsing@login01.darwin:~/CISC372_picProject[jaxsing@login01.darwin CISC372_picProject]$ exit
+exit
+
+Script done on Fri 31 Oct 2025 07:01:01 PM EDT
